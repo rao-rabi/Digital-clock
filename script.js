@@ -1,4 +1,4 @@
-function displayTime(){
+function displayTime() {
     let date = new Date();
 
     let hrs = date.getHours();
@@ -6,20 +6,19 @@ function displayTime(){
     let sec = date.getSeconds();
     let session = document.getElementById('session');
 
-    document.getElementById('hours').innerHTML = hrs;
+    let formattedHours = hrs % 12 || 12;
+
+    document.getElementById('hours').innerHTML = formattedHours;
     document.getElementById('mins').innerHTML = mins;
     document.getElementById('secs').innerHTML = sec;
 
-    if(hrs >=12){
+    if (hrs >= 12) {
         session.innerHTML = 'PM';
     }
-    else{
+    else {
         session.innerHTML = 'AM'
     }
-
-    if(hrs > 12){
-        hrs = hrs-12;
-    }
 }
+
 
 setInterval(displayTime, 1000)
