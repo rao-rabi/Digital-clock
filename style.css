@@ -4,7 +4,7 @@ body{
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    color: rgb(0, 255, 170);
+    color: rgb(0, 47, 255);
 }
 .clock{
     font-size: 45px;
