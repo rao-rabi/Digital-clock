@@ -4,14 +4,42 @@ body{
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    background:linear-gradient(to left, violet , green);
-    color: rgb(0, 255, 42);
+    color: rgb(0, 255, 170);
 }
 .clock{
     font-size: 45px;
     font-weight: bold;
     font-family: sans-serif;
-    box-shadow: 0px 0px 25px 15px rgba(220, 21, 247,0.8);
-    background:linear-gradient(to right,violet ,green);
+    width: 100vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+}
+
+.time{
+    background-color: rgba(255, 255, 255, 0.42);
     padding: 2%;
+    border-radius: 10%;
+}
+
+.back-video{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100% !important;
+        height:auto !important;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto !important;
+        height:100% !important;
+    }
 }

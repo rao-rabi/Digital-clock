@@ -8,15 +8,19 @@ function displayTime() {
 
     let formattedHours = hrs % 12 || 12;
 
-    document.getElementById('hours').innerHTML = formattedHours;
-    document.getElementById('mins').innerHTML = mins;
-    document.getElementById('secs').innerHTML = sec;
+    document.getElementById('hours').innerHTML = formatTwoDigits(formattedHours);
+    document.getElementById('mins').innerHTML = formatTwoDigits(mins);
+    document.getElementById('secs').innerHTML = formatTwoDigits(sec);
 
     if (hrs >= 12) {
         session.innerHTML = 'PM';
     }
     else {
         session.innerHTML = 'AM'
+    }
+
+    function formatTwoDigits(value){
+        return value.toString().padStart(2, '0')
     }
 }
 
